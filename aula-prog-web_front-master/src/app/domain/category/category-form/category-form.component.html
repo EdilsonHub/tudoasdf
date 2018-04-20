@@ -1,0 +1,10 @@
+<form [formGroup]= "form">
+    <div class="row">
+        <div class="col-md-12">
+            <input type="text" class="form-control" formControlName="nome"/>
+        </div>
+    </div>
+<button (click)="salvar(form.value)">Salvar</button>
+<button [routerLink]="['/category']">Voltar</button>
+
+</form>

@@ -1,0 +1,24 @@
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Nome</th>
+        <th scope="col">Sigla</th>
+        <th scope="col">Operações</th>
+      </tr>
+    </thead>
+    <tbody>
+
+      <tr *ngFor="let category of categories; let i = index">
+        <th scope="row">{{category.id}}</th>
+        <td>{{category.nome}}</td>
+        <td>{{category.sigla}}</td>
+        <td>
+          <button (click)="delete(category.id, i)" >Excluir</button>
+          <button [routerLink]="['form',category.id]">Alterar</button>
+          
+        </td>
+      </tr>
+      <button [routerLink]="['form']">Novo</button>
+    </tbody>
+  </table>
