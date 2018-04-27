@@ -1,0 +1,32 @@
+<form [formGroup]="form">
+    <div class="row">
+        <div class="col-md-12">
+            <label for="">
+                nome
+                <input type="text" class="form-control" formControlName="nome" />
+            </label>
+        </div>
+        <div class="col-md-12">
+            <label for="">
+                preço
+
+                <input type="text" class="form-control" formControlName="preco" />
+            </label>
+        </div>
+        <div class="col-md-12">
+            <label for="">
+                categoria
+                <input type="text" class="form-control" formControlName="categoria" />
+            </label>
+        </div>
+        <div class="col-md-12">
+            <label for="">
+                descrição
+                <input type="text" class="form-control" formControlName="descricao" />
+            </label>
+        </div>
+    </div>
+    <button (click)="salvar(form.value)">Salvar</button>
+    <button [routerLink]="['/produto']">Voltar</button>
+
+</form>

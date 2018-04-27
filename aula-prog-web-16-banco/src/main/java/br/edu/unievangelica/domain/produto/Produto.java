@@ -1,7 +1,5 @@
-package br.edu.unievangelica.domain.category;
+package br.edu.unievangelica.domain.produto;
 
-import br.edu.unievangelica.domain.provincia.Provincia;
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Getter;
 import lombok.Setter;
 import org.hibernate.validator.constraints.NotEmpty;
@@ -9,7 +7,6 @@ import org.hibernate.validator.constraints.NotEmpty;
 import javax.persistence.*;
 import javax.validation.constraints.Size;
 import java.io.Serializable;
-import java.util.List;
 
 //import br.edu.unievangelica.domain.provincia.Provincia;
 //import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
@@ -22,8 +19,8 @@ import java.util.List;
 //import java.io.Serializable;
 //import java.util.List;
 @Entity
-@Table(name = "category")
-public class Category implements Serializable {
+@Table(name = "produto")
+public class Produto implements Serializable {
 //teste de continuidadde
 
 
@@ -31,8 +28,8 @@ public class Category implements Serializable {
         private static final long serialVersionUID = 1L;
 
         @Id
-        @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "category_id_seq")
-        @SequenceGenerator(name = "category_id_seq", sequenceName = "category_id_seq", allocationSize = 1)
+        @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "produto_id_seq")
+        @SequenceGenerator(name = "produto_id_seq", sequenceName = "produto_id_seq", allocationSize = 1)
         @Column(name = "id")
         @Getter
         private long id;
@@ -43,6 +40,29 @@ public class Category implements Serializable {
         @Getter
         @Setter
         private String nome;
+
+        @NotEmpty
+        @Size(max = 50)
+        @Column(name = "marca")
+        @Getter
+        @Setter
+        private String marca;
+
+        @NotEmpty
+        @Size(max = 500)
+        @Column(name = "descricao")
+        @Getter
+        @Setter
+        private String descricao;
+
+        @NotEmpty
+        @Size(max = 50)
+        @Column(name = "preco")
+        @Getter
+        @Setter
+        private String preco;
+
+
 
 
 }

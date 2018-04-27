@@ -1,0 +1,28 @@
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Nome</th>
+        <th scope="col">Marca</th>
+        <th scope="col">Descrição</th>
+        <th scope="col">Preço</th>
+        
+      </tr>
+    </thead>
+    <tbody>
+
+      <tr *ngFor="let produto of produtos; let i = index">
+        <th scope="row">{{produto.id}}</th>
+        <td>{{produto.nome}}</td>
+        <td>{{produto.marca}}</td>
+        <td>{{produto.descricao}}</td>
+        <td>{{produto.preco}}</td>
+        <td>
+          <button (click)="delete(produto.id, i)" >Excluir</button>
+          <button [routerLink]="['form',produto.id]">Alterar</button>
+          
+        </td>
+      </tr>
+      <button [routerLink]="['form']">Novo</button>
+    </tbody>
+  </table>
