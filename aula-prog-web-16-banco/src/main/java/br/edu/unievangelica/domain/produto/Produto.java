@@ -55,8 +55,8 @@ public class Produto implements Serializable {
         @Setter
         private String descricao;
 
-        @NotEmpty
-        @Size(max = 50)
+
+//        @Size(max = 50)
         @Column(name = "preco")
         @Getter
         @Setter

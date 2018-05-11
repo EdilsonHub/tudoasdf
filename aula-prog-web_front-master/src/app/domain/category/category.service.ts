@@ -25,7 +25,7 @@ export class CategoryService{
             .get(`${this.API_URL}/category/${id}`)
             .map(res => res.json().content);
     }
-
+// <!-- sjasdj-->
     delete(id: number): Observable<boolean>{
         return this.http
             .delete(`${this.API_URL}/category/${id}`)

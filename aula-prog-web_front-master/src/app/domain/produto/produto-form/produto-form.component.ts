@@ -13,6 +13,7 @@ import { ProdutoService } from '../produto.service';
 export class ProdutoFormComponent implements OnInit {
   form: FormGroup;
   constructor(
+
     private produtoService: ProdutoService,
     private formBuilder: FormBuilder,
     private router: Router,
@@ -25,7 +26,11 @@ export class ProdutoFormComponent implements OnInit {
 
     this.form = this.formBuilder.group({
       id: [],
-      nome: ['', Validators.required] 
+      preco: ['', Validators.required],
+      nome: ['', Validators.required],
+     // categoria: ['', Validators.required] ,
+      descricao: ['', Validators.required] ,
+      marca: ['', Validators.required]
     }, {});
      
     if(produto.id != null) {
@@ -35,7 +40,7 @@ export class ProdutoFormComponent implements OnInit {
     }
 
   }
-  salvar(produto: Produto) {
+  save(produto: Produto) {
    // console.log("Estou aqui");
     this.produtoService.save(produto).subscribe(response => {
       //redirecionameto;

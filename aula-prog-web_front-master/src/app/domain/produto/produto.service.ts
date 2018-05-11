@@ -63,7 +63,7 @@ export class ProdutoService {
          let headers = new Headers({'Content-Type':'application/json'});
          let options = new RequestOptions({headers: headers});
 
-         if(produto.id){
+         if(produto.id == null){
              return this.http
                 .put(`${this.API_URL}/produto/`, JSON.stringify(produto), options)
                 .map(res => res.json().content);
