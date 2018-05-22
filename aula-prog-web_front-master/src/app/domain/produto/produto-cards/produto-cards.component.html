@@ -1,0 +1,19 @@
+<div style="float:left;" class="coisa" *ngFor="let produto of produtos; let i = index" >
+
+  <div class="coisa" style="margin: 1em">
+    
+      <div>
+
+        <div class="card" style="width: 18rem;padding: 1em;box-sizing: border-box">
+          <img class="card-img-top" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRFyO3rI-cG9l54zbZrlgs6KwDZtfrKszPB-dcAnEDyK-xx8JcKJg" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title" style="text-align:center">{{produto.nome}}</h5>
+            <p class="card-text" style="margin: 1em 0">{{produto.descricao}}.</p>
+            <p class="card-text">Por apenas: R$ {{produto.preco}}.</p>
+            <a href="#" (click)="addicionaAoCarrinho(produto)" style="width: 100%;" class="btn btn-primary">Comprar amanhã</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+</div>

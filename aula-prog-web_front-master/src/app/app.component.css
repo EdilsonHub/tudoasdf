@@ -1,0 +1,55 @@
+html{
+    background-color:rgba(68, 179, 114, 0.24);
+}
+#logo{
+    margin: 2em;
+}
+.margem {
+    margin: 2em;
+    padding: 2em;
+    box-sizing: border-box;
+    float: left;
+}
+.principal {
+
+
+}
+#menu {
+    display: block;
+    margin: 2em;
+
+    margin: 3em;
+    box-shadow: rgb(7, 87, 87) 0 2em;
+
+}
+.frase{
+    padding: 7em;
+   
+    box-sizing: border-box;
+    align-items: center;
+}
+#menu li, a  {
+    margin-top: 1em;
+    margin-right: 2em;
+    float: left;
+    
+}
+#menu li, a:first-child {
+    margin-left: -1.5em;
+}
+li {
+    list-style-type: none;
+}
+.destaque {
+    size: 5em;
+    margin-block-start: initial;
+   }
+
+
+.carrinho {
+    float: right;
+    padding-top : .5em; 
+}
+.borda {
+    
+}

@@ -1,4 +1,4 @@
-<table class="table">
+    <table class="table">
     <thead>
       <tr>
         <th scope="col">#</th>
@@ -14,11 +14,11 @@
         <td>{{category.nome}}</td>
         <td>{{category.sigla}}</td>
         <td>
-          <button (click)="delete(category.id, i)" >Excluir</button>
-          <button [routerLink]="['form',category.id]">Alterar</button>
+          <button class="btn btn-danger" (click)="delete(category.id, i)" >Excluir</button>
+          <button class="btn btn-warning" [routerLink]="['form',category.id]">Alterar</button>
           
         </td>
       </tr>
-      <button [routerLink]="['form']">Novo</button>
+      <button class="btn btn-secondary" [routerLink]="['form']">Novo</button>
     </tbody>
   </table>

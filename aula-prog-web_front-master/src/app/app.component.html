@@ -1,25 +1,53 @@
 <!-- TOPO -->
-<div class="container">
-    <div class="row">
-        <div class="col-6">
-            <img id="logo" src="assets/logo.png" alt="Logomarca muito louca.">
+<div class="container principal">
+    <header class="">
+        <div class=" ">
+            <div class="row  ">
+                <div class="col-md-6">
+                    <a  [routerLink]="['/produto/cards']"><img id="logo" src="http://pablo.deassis.net.br/wp-content/uploads/2011/08/medo-2.gif" alt="A terra é plana igual uma bola"></a>
+                </div>
+                <div class="col-6 frase">
+                    <h2 class="destaque">Medo, um sentimento muito assustador!</h2>
+                </div>
+            </div>
         </div>
-        <div class="col-6">
-            <p class="destaque">THE WORLD'S LARGEST WEB DEVELOPER SITE</p>
-        </div>
-    </div>
-</div>
+        <!-- MENU -->
+        <div class="row ">
+            <div class="col-8">
+                <nav class="navbar bordar">
 
-<!-- MENU -->
-<div class="container bg-verde-musgo">
-    <div class="row">
-        <div class="col-8">
+                    <ul>
+                        <li>
+                            <a class="btn btn-primary"  [routerLink]="['/produto/cards']">Home</a>
+                        </li>
+                        <li>
+                            <a class="btn btn-primary" [routerLink]="['category']">Lista de categorias</a>
+                        </li>
+                        <li>
+                            <a class="btn btn-primary" [routerLink]="['produto']">Lista de produtos</a>
+                        </li>
+                        <li>
+                            <a class="btn btn-primary" href="http:www.google.com">Irmão do anterior</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="col-4">
+                <ul class="carrinho">
+                    <li>
+                        <a class="btn btn-success" [routerLink]="['carrinho']">Carrinho</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <!-- CONTEUDO -->
+    <aside class="container borda" hidden="true">
+        <div>
             <ul>
                 <li>
-                    <a [routerLink]="['category']">TABELA com git</a>
-                </li>
-                <li>
-                    <a [routerLink]="['produto']">produto</a>
+                    <a href="http:www.google.com">Link 1</a>
                 </li>
                 <li>
                     <a href="http:www.google.com">Link 1</a>
@@ -29,56 +57,18 @@
                 </li>
             </ul>
         </div>
-        <div class="col-4">
-            <ul>
-                <li>
-                    <a href="http:www.google.com">Link 1</a>
-                </li>
-            </ul>
-        </div>
-    </div>
-</div>
-
-<!-- CONTEUDO -->
-<div class="container">
-    <div>
-        <ul>
-            <li>
-                <a href="http:www.google.com">Link 1</a>
-            </li>
-            <li>
-                <a href="http:www.google.com">Link 1</a>
-            </li>
-            <li>
-                <a href="http:www.google.com">Link 1</a>
-            </li>
-        </ul>
-    </div>
-    <div>
+    </aside>
+    <div class="container">
 
         <router-outlet></router-outlet>
 
     </div>
-</div>
-<div class="container">
-    <div class="row">
-        <div>
 
-            <div class="card" style="width: 18rem;">
-                <img class="card-img-top" src="..." alt="Card image cap">
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
 
-<!-- RODAPE -->
-<div>
-    <p>
-        <i>2018 - Todos direitos reservados</i>
-    </p>
+    <!-- RODAPE -->
+    <footer style="display: block; clear: both;" class="borda">
+        <p>
+            <i>&copy; SatirasSaltas 2018 - Todos direitos reservados</i>
+        </p>
+    </footer>
 </div>

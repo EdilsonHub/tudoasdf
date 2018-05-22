@@ -35,7 +35,9 @@
                 </label>
             </div>
     </div>
-    <button (click)="save(form.value)">Salvar</button>
-    <button [routerLink]="['/produto']">Voltar</button>
+    <button class="btn btn-primary" (click)="save(form.value)">Salvar</button>
+   
+    <button class="btn btn-secondary" [routerLink]="['/produto']">Voltar</button>
+
 
 </form>

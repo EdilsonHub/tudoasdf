@@ -7,6 +7,7 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 // Component
 import {ProdutoListComponent} from './produto-list/produto-list.component'
 import {ProdutoFormComponent} from './produto-form/produto-form.component'
+import { ProdutoCardsComponent } from './produto-cards/produto-cards.component';
 
 //routing 
 import {ProdutoRouting} from './produto-routing.module';
@@ -18,7 +19,8 @@ import {ProdutoService} from './produto.service';
     declarations: [
         //Componentes
         ProdutoListComponent,
-        ProdutoFormComponent
+        ProdutoFormComponent,
+        ProdutoCardsComponent
 
     ],
     imports: [

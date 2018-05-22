@@ -36,12 +36,10 @@ public class Produto implements Serializable {
 
         @NotEmpty
         @Size(max = 50)
-        @Column(name = "nome")
-        @Getter
-        @Setter
+        @Column(name = "nome") @Getter @Setter
         private String nome;
 
-        @NotEmpty
+                                                                                @NotEmpty
         @Size(max = 50)
         @Column(name = "marca")
         @Getter

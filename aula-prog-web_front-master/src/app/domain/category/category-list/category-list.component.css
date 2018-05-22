@@ -1,0 +1,7 @@
+.margem{
+    margin: 3em;
+    padding: 2em;
+    border-radius: 5px;
+    float: left;
+    box-sizing: border-box;
+}
