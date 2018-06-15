@@ -10,7 +10,7 @@
             <h5 class="card-title" style="text-align:center">{{produto.nome}}</h5>
             <p class="card-text" style="margin: 1em 0">{{produto.descricao}}.</p>
             <p class="card-text">Por apenas: R$ {{produto.preco}}.</p>
-            <a href="#" (click)="addicionaAoCarrinho(produto)" style="width: 100%;" class="btn btn-primary">Comprar amanhã</a>
+            <button (click)="addicionaAoCarrinho(produto)" style="width: 100%;" class="btn btn-primary">addicionar ao carrinho</button>
           </div>
         </div>
       </div>

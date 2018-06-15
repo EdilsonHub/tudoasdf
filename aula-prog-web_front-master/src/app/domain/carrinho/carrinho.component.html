@@ -3,17 +3,27 @@
     <img src="../../assets/icons/cart-200.png"/>
   </div>
   <div class="col-8">
-      <h3>Meu Carrinho</h3>
+      <h3 ><a [routerLink]="['/carrinho/carrinho-layout']">Meu Carrinho</a></h3>
 
       <div *ngIf="produtos" >
         <span>{{produtos.length}} Produtos</span>
+        <!-- <button [routerLink]="['/carrinho-layout']">Mostrar Produtos</button> -->
+        <!-- <button>Mostrar Produtos</button> -->
+        
+
+        <!-- <ul *ngFor="let pro of produtos">
+          <li>{{pro.id}}</li>
+          <li>{{pro.nome}}</li>
+          <li>{{pro.preco}}</li>
+          <li>{{pro.descricao}}</li>
+          <li>{{pro.marca}}</li>    
+        </ul> -->
+
       </div>
 
       <div *ngIf="!produtos" >
         <span>Carrinho Vazio</span>
       </div>
-
-    
       
   </div>
 </div>

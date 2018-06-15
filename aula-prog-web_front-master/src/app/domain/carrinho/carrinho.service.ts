@@ -30,5 +30,9 @@ export class CarrinhoService {
        this.carrinhoSubject.next(<Carrinho>{ativo: true , produtos:  this.produtos});
     }
 
+    jogarVariavel() {
+        return this.produtos;
+    }
+
 
 }

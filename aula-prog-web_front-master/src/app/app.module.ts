@@ -6,17 +6,24 @@ import { AppComponent } from './app.component';
 
 import {AppRoutingModule} from './app.routes';
 
+// import {CarrinhoModule} from './domain/carrinho/carrinho.module'; // não usar carrinho moile porque estou usando o carrinho service e component
+import {CarrinhoComponent} from './domain/carrinho/carrinho.component';
+import {CarrinhoService} from './domain/carrinho/carrinho.service'; 
+
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    CarrinhoComponent
   ],
   imports: [
     BrowserModule,
     HttpModule,
     RouterModule,
-    AppRoutingModule
+    AppRoutingModule,
+    // CarrinhoModule
   ],
   providers: [
+    CarrinhoService
   ],
   bootstrap: [AppComponent]
 })

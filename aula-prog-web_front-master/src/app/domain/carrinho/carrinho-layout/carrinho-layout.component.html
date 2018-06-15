@@ -1,0 +1,31 @@
+<div class="col-8">
+  <h3>carrinho esta aparecendo</h3>
+
+<script> 
+document.write(produtos)
+;  
+  </script>
+  <div  >
+
+    <ul *ngFor="let pro of produtosDoCarrinho">
+      
+      <li>Id do produto: {{pro.id}}</li>
+      <li>Nome no produto: {{pro.nome}}</li>
+      <li>Preço do Produto: {{pro.preco}}</li>
+      <li>Descrição do produto: {{pro.descricao}}</li>
+      <li>Marca do produto: {{pro.marca}}</li>    
+    </ul>
+    
+  </div>
+
+  <div *ngIf="!produtos" >
+    <span>Carrinho Vazio</span>
+  </div>
+  
+</div>
+
+    <!-- id: number;
+    nome: String;
+    preco: number;
+    descricao: String;
+    marca: String; -->

@@ -1,26 +1,28 @@
 import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {HttpModule} from '@angular/http';
-import { RouterModule, Routes } from '@angular/router';
+import {RouterModule, Routes } from '@angular/router';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+// import {CarrinhoRouting} from '../carrinho/carrinho-routing.module';
 
-
-import {CarrinhoComponent} from './carrinho.component';
 
 //não faz sentido
-import {Carrinho} from './carrinho';
-import {Produto} from '../produto/produto';
+// import {Carrinho} from './carrinho';
+// import {Produto} from '../produto/produto';
 
 
 
-import{CarrinhoService} from './carrinho.service';
+// import {CarrinhoComponent} from './carrinho.component';
+// import{CarrinhoService} from './carrinho.service';
 
-import {CarrinhoRouting} from './carrinho-routing.module'
+import {CarrinhoRouting} from './carrinho-routing.module';
+import { CarrinhoLayoutComponent } from './carrinho-layout/carrinho-layout.component';
 
 @NgModule({
   declarations: [
     //Componentes
-    CarrinhoComponent,
+    // CarrinhoComponent,
+    CarrinhoLayoutComponent
 ],
   imports: [
     // angular
@@ -36,7 +38,7 @@ import {CarrinhoRouting} from './carrinho-routing.module'
   
   providers: [
     // services
-    CarrinhoService
+    // CarrinhoService
   ]
 })
 export class CarrinhoModule { }

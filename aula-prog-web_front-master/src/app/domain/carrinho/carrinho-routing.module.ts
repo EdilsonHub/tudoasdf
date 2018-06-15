@@ -1,17 +1,12 @@
 import {NgModule} from '@angular/core';
 import {Routes, RouterModule} from '@angular/router';
 
-import { CarrinhoComponent } from './carrinho.component';
-
-//não faz sentido
-import { CarrinhoService } from './carrinho.service';
-import {CarrinhoModule} from './carrinho.module'
+import { CarrinhoLayoutComponent } from '../carrinho/carrinho-layout/carrinho-layout.component';
 
 
 
 const CarrinhoRoutes: Routes = [
-    {path: '', component: CarrinhoComponent}
-     
+    {path: 'carrinho-layout', component: CarrinhoLayoutComponent} 
 ]; 
 
 @NgModule({
